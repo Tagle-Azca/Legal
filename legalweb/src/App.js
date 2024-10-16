@@ -1,7 +1,25 @@
-import Landing from "./pages/landing"; // Cambia el nombre a 'Landing'
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import LandingPage from "./pages/landing";
+import Opciones from "./pages/opciones";
+import NOTFOUND from "./pages/404";
 
-function App() {
-  return <Landing />; // Usa 'Landing' en mayúscula
-}
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="*" element={<NOTFOUND />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/Inicio" element={<LandingPage />} />
+        <Route path="/Opciones" element={<Opciones />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
