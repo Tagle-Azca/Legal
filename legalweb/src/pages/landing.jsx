@@ -1,9 +1,56 @@
+import {isMobile} from 'react-device-detect'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CustomButton from '../components/boton';
+import { Button, Typography, Box, Container } from '@mui/material';
+import { unstable_extractEventHandlers } from '@mui/utils';
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#1976d2', 
+      },
+    },
+    typography: {
+      h4: {
+        fontWeight: 700,
+      },
+    },
+  });
 const Landing = () => {
-  return (
-    <div>
-      <h1>Bienvenido a la Landing Page</h1>
-    </div>
-  );
-};
+    return (
+      <ThemeProvider theme={theme}>
+        {}
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100vh', 
+            textAlign: 'center',
+            backgroundColor: '#f5f5f5', 
+            padding: isMobile ? '1rem' : '3rem', 
+          }}
+          
+        >
+          <Container>
+            {}
+            <Typography variant={isMobile ? 'h5' : 'h4'} gutterBottom>
+              ¿Buscas asesorías legales?
+            </Typography>
+  
+            <CustomButton
+            text="Start"
+            onClick= {console.log("gracias")}
+            variant="contained"
+            color="primary"
+            sx={{ fontSize: isMobile ? '14px' : '16px' }} 
+          />
+        </Container>
+      </Box>
+      </ThemeProvider>
+    );
+  };
+  
 
 export default Landing;
