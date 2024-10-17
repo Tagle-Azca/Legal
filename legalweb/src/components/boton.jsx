@@ -6,10 +6,10 @@ export default function CustomButton({
   onClick,
   variant = "contained",
   color = "primary",
-  sx = {},
+  style = {},
 }) {
   return (
-    <Button variant={variant} color={color} onClick={onClick} sx={sx}>
+    <Button variant={variant} color={color} onClick={onClick} style={style}>
       {text}
     </Button>
   );

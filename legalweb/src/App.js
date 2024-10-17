@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/landing";
 import Opciones from "./pages/opciones";
 import NOTFOUND from "./pages/404";

@@ -1,12 +1,15 @@
 import { isMobile } from "react-device-detect";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CustomButton from "../components/boton";
-import { Button, Typography, Box, Container } from "@mui/material";
+import { Typography, Box, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import FotoTelefono from "../IMG/wallpaper.jpeg";
+import FotoComputadora from "../IMG/PC.jpeg";
+
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1976d2",
+      main: "#000",
     },
   },
   typography: {
@@ -15,36 +18,69 @@ const theme = createTheme({
     },
   },
 });
+
 const Landing = () => {
   const navigate = useNavigate();
+
   return (
     <ThemeProvider theme={theme}>
-      {}
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
           height: "100vh",
           textAlign: "center",
           backgroundColor: "#f5f5f5",
           padding: isMobile ? "1rem" : "3rem",
+          backgroundImage: `url(${isMobile ? FotoTelefono : FotoComputadora})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <Container>
-          {}
-          <Typography variant={isMobile ? "h5" : "h4"} gutterBottom>
-            ¿Buscas asesorías legales?
-          </Typography>
+          <div
+            className="Text"
+            style={{
+              marginTop: isMobile ? "8vh" : "19vh",
+              color: isMobile ? "black" : "white",
+            }}
+          >
+            <Typography variant="h4" gutterBottom>
+              ¿Buscas asesorías legales gratis?
+            </Typography>
 
-          <CustomButton
-            text="Start"
-            onClick={() => navigate("/Opciones")}
-            variant="contained"
-            color="primary"
-            sx={{ fontSize: isMobile ? "14px" : "16px" }}
-          />
+            <Typography
+              variant="h5"
+              gutterBottom
+              style={{ marginTop: "5rem", color: isMobile ? "black" : "white" }}
+            >
+              ¡Nosotros te ayudaremos!
+            </Typography>
+          </div>
+        </Container>
+
+        <Container>
+          <div
+            style={{
+              width: isMobile ? "20rem" : "",
+              marginBottom: "10rem",
+            }}
+          >
+            <CustomButton
+              text="Empecemos aquí"
+              onClick={() => navigate("/Opciones")}
+              variant="contained"
+              style={{
+                fontSize: isMobile ? "14px" : "16px",
+                padding: isMobile ? "8px 20px" : "12px 24px",
+                borderRadius: "15px",
+                color: isMobile ? "white" : "black",
+                backgroundColor: isMobile ? "black" : "white",
+              }}
+            />
+          </div>
         </Container>
       </Box>
     </ThemeProvider>
