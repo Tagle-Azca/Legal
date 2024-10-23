@@ -43,18 +43,21 @@ const Landing = () => {
           <div
             className="Text"
             style={{
-              marginTop: isMobile ? "8vh" : "19vh",
-              color: isMobile ? "black" : "white",
+              marginTop: isMobile ? "2vh" : "15vh",
+              color: isMobile ? "black" : "black",
             }}
           >
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h3" gutterBottom>
               ¿Buscas asesorías legales gratis?
             </Typography>
 
             <Typography
-              variant="h5"
+              variant="h4"
               gutterBottom
-              style={{ marginTop: "5rem", color: isMobile ? "black" : "white" }}
+              style={{
+                marginTop: isMobile ? "15rem" : "30rem",
+                color: isMobile ? "black" : "black",
+              }}
             >
               ¡Nosotros te ayudaremos!
             </Typography>
@@ -64,8 +67,8 @@ const Landing = () => {
         <Container>
           <div
             style={{
+              marginTop: isMobile ? "-9rem" : "",
               width: isMobile ? "20rem" : "",
-              marginBottom: "10rem",
             }}
           >
             <CustomButton
@@ -76,8 +79,9 @@ const Landing = () => {
                 fontSize: isMobile ? "14px" : "16px",
                 padding: isMobile ? "8px 20px" : "12px 24px",
                 borderRadius: "15px",
-                color: isMobile ? "white" : "black",
-                backgroundColor: isMobile ? "black" : "white",
+                width: isMobile ? "" : "20rem",
+                color: isMobile ? "white" : "white",
+                backgroundColor: isMobile ? "black" : "black",
               }}
             />
           </div>
