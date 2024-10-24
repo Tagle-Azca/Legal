@@ -1,4 +1,3 @@
-import { height } from "@mui/system";
 import React, { useEffect, useState } from "react";
 
 const OpcionesConImagen = () => {
