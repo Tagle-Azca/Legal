@@ -20,12 +20,12 @@ const OpcionesConImagen = () => {
   };
 
   const opciones = [
-    { nombre: "Opción 1", img: "https://via.placeholder.com/100" },
-    { nombre: "Opción 2", img: "https://via.placeholder.com/100" },
-    { nombre: "Opción 3", img: "https://via.placeholder.com/100" },
-    { nombre: "Opción 4", img: "https://via.placeholder.com/100" },
-    { nombre: "Opción 5", img: "https://via.placeholder.com/100" },
-    { nombre: "Opción 6", img: "https://via.placeholder.com/100" },
+    { nombre: "Mercantil ", img: "../IMG/wallpaper.webp" },
+    { nombre: "Civil", img: "../IMG/wallpaper.webp" },
+    { nombre: "Penal", img: "../IMG/wallpaper.webp" },
+    { nombre: "Laboral", img: "../IMG/wallpaper.webp" },
+    { nombre: "Amparo", img: "../IMG/wallpaper.webp" },
+    { nombre: "otros", img: "../IMG/wallpaper.webp" },
   ];
 
   // Estilos generales
@@ -41,6 +41,7 @@ const OpcionesConImagen = () => {
     alignItems: "center",
     gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
     maxWidth: isMobile ? "100%" : "100vh",
+
     margin: "0 auto",
   };
 

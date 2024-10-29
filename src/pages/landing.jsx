@@ -43,7 +43,7 @@ const Landing = () => {
           <div
             className="Text"
             style={{
-              marginTop: isMobile ? "2vh" : "15vh",
+              marginTop: isMobile ? "2vh" : "1  rem",
               color: isMobile ? "black" : "black",
             }}
           >
@@ -52,14 +52,14 @@ const Landing = () => {
             </Typography>
 
             <Typography
-              variant="h4"
+              variant="h5"
               gutterBottom
               style={{
-                marginTop: isMobile ? "15rem" : "30rem",
+                marginTop: isMobile ? "20rem" : "36rem",
                 color: isMobile ? "black" : "black",
               }}
             >
-              ¡Nosotros te ayudaremos!
+              Asesorias Legales AG
             </Typography>
           </div>
         </Container>
@@ -77,7 +77,7 @@ const Landing = () => {
               variant="contained"
               style={{
                 fontSize: isMobile ? "14px" : "16px",
-                padding: isMobile ? "8px 20px" : "12px 24px",
+                padding: isMobile ? "8px 40px" : "12px 24px",
                 borderRadius: "15px",
                 width: isMobile ? "" : "20rem",
                 color: isMobile ? "white" : "white",
