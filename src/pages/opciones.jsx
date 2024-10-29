@@ -20,12 +20,12 @@ const OpcionesConImagen = () => {
   };
 
   const opciones = [
-    { nombre: "Mercantil ", img: "../IMG/wallpaper.webp" },
-    { nombre: "Civil", img: "../IMG/wallpaper.webp" },
-    { nombre: "Penal", img: "../IMG/wallpaper.webp" },
-    { nombre: "Laboral", img: "../IMG/wallpaper.webp" },
-    { nombre: "Amparo", img: "../IMG/wallpaper.webp" },
-    { nombre: "otros", img: "../IMG/wallpaper.webp" },
+    { nombre: "Mercantil", img: require("../IMG/Mercantil.png") },
+    { nombre: "Civil", img: require("../IMG/Civil.png") },
+    { nombre: "Penal", img: require("../IMG/Penal.png") },
+    { nombre: "Laboral", img: require("../IMG/Laboral.png") },
+    { nombre: "Amparo", img: require("../IMG/Amparo.png") },
+    { nombre: "otros", img: require("../IMG/Otros.png") },
   ];
 
   // Estilos generales
@@ -34,14 +34,15 @@ const OpcionesConImagen = () => {
     padding: "20px",
   };
 
+  // Estilos de la cuadrícula, ajustados para un 80% en computadora
   const gridContainerStyle = {
     display: "grid",
-    gap: isMobile ? "20px " : "2rem",
+    marginTop: isMobile ? "20px" : "5rem",
+    gap: isMobile ? "20px" : "2rem",
     justifyContent: "center",
     alignItems: "center",
     gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
-    maxWidth: isMobile ? "100%" : "100vh",
-
+    width: isMobile ? "100%" : "80%",
     margin: "0 auto",
   };
 
@@ -49,10 +50,11 @@ const OpcionesConImagen = () => {
     position: "relative",
     overflow: "hidden",
     width: "100%",
-    height: "120px",
+    height: isMobile ? "120px" : "200px", // Altura más alta en computadoras
     cursor: "pointer",
     border: "1px solid #ccc",
     borderRadius: "8px",
+
     transition: "transform 0.3s",
   };
 
@@ -99,7 +101,7 @@ const OpcionesConImagen = () => {
 
   return (
     <div style={containerStyle}>
-      <h1>Opciones de asesoría</h1>
+      <h1 style={{ fontFamily: "" }}>Opciones de asesoría</h1>
       <div style={gridContainerStyle}>
         {opciones.map((opcion, index) => (
           <div
