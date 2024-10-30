@@ -4,7 +4,7 @@ import CustomButton from "../components/boton";
 import { Typography, Box, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import FotoTelefono from "../IMG/wallpaper.webp";
-import FotoComputadora from "../IMG/PC.webp";
+import FotoComputadora from "../IMG/Landing.png";
 
 const theme = createTheme({
   palette: {
@@ -43,7 +43,7 @@ const Landing = () => {
           <div
             className="Text"
             style={{
-              marginTop: isMobile ? "2vh" : "1  rem",
+              marginTop: isMobile ? "2vh" : "1rem",
               color: isMobile ? "black" : "black",
             }}
           >
@@ -55,7 +55,7 @@ const Landing = () => {
               variant="h5"
               gutterBottom
               style={{
-                marginTop: isMobile ? "20rem" : "36rem",
+                marginTop: isMobile ? "40vh" : "65vh",
                 color: isMobile ? "black" : "black",
               }}
             >
@@ -67,12 +67,12 @@ const Landing = () => {
         <Container>
           <div
             style={{
-              marginTop: isMobile ? "-9rem" : "",
+              marginTop: isMobile ? "-20vh" : "1rem",
               width: isMobile ? "20rem" : "",
             }}
           >
             <CustomButton
-              text="Empecemos aquí"
+              text="¡Nosotros te ayudamos!"
               onClick={() => navigate("/Opciones")}
               variant="contained"
               style={{

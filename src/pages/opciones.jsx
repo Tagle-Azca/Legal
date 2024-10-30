@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const OpcionesConImagen = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Detectar si es un dispositivo móvil
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -15,26 +16,44 @@ const OpcionesConImagen = () => {
     return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
-  const handleOptionClick = (option) => {
-    alert(`Has seleccionado la opción: ${option}`);
-  };
-
   const opciones = [
-    { nombre: "Mercantil", img: require("../IMG/Mercantil.png") },
-    { nombre: "Civil", img: require("../IMG/Civil.png") },
-    { nombre: "Penal", img: require("../IMG/Penal.png") },
-    { nombre: "Laboral", img: require("../IMG/Laboral.png") },
-    { nombre: "Amparo", img: require("../IMG/Amparo.png") },
-    { nombre: "otros", img: require("../IMG/Otros.png") },
+    {
+      nombre: "Mercantil",
+      img: require("../IMG/Mercantil.png"),
+      ruta: "/AsesoriaMercantil",
+    },
+    {
+      nombre: "Civil",
+      img: require("../IMG/Civil.png"),
+      ruta: "/AsesoriaCivil",
+    },
+    {
+      nombre: "Penal",
+      img: require("../IMG/Penal.png"),
+      ruta: "/AsesoriaPenal",
+    },
+    {
+      nombre: "Laboral",
+      img: require("../IMG/Laboral.png"),
+      ruta: "/AsesoriaLaboral",
+    },
+    {
+      nombre: "Amparo",
+      img: require("../IMG/Amparo.png"),
+      ruta: "/AsesoriaAmparo",
+    },
+    {
+      nombre: "otros",
+      img: require("../IMG/Otros.png"),
+      ruta: "/AsesoriaOtros",
+    },
   ];
 
-  // Estilos generales
   const containerStyle = {
     textAlign: "center",
     padding: "20px",
   };
 
-  // Estilos de la cuadrícula, ajustados para un 80% en computadora
   const gridContainerStyle = {
     display: "grid",
     marginTop: isMobile ? "20px" : "5rem",
@@ -50,11 +69,10 @@ const OpcionesConImagen = () => {
     position: "relative",
     overflow: "hidden",
     width: "100%",
-    height: isMobile ? "120px" : "200px", // Altura más alta en computadoras
+    height: isMobile ? "120px" : "200px",
     cursor: "pointer",
     border: "1px solid #ccc",
     borderRadius: "8px",
-
     transition: "transform 0.3s",
   };
 
@@ -84,7 +102,6 @@ const OpcionesConImagen = () => {
     marginTop: "-30px",
   };
 
-  // Estilo de hover para computadoras
   const handleMouseEnter = (e) => {
     if (!isMobile) {
       const overlay = e.currentTarget.querySelector(".hover-overlay");
@@ -99,6 +116,10 @@ const OpcionesConImagen = () => {
     }
   };
 
+  const handleOptionClick = (ruta) => {
+    navigate(ruta);
+  };
+
   return (
     <div style={containerStyle}>
       <h1 style={{ fontFamily: "" }}>Opciones de asesoría</h1>
@@ -107,7 +128,7 @@ const OpcionesConImagen = () => {
           <div
             key={index}
             style={gridItemStyle}
-            onClick={() => handleOptionClick(opcion.nombre)}
+            onClick={() => handleOptionClick(opcion.ruta)}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
