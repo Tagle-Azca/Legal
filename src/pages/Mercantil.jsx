@@ -1,7 +1,7 @@
 //Mercantil
 import React, { use, useEffect, useState } from "react";
 
-const Telefono = () => {
+const Mercantil = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -10,3 +10,4 @@ const Telefono = () => {
     };
   });
 };
+export default Mercantil;
