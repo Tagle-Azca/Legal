@@ -2,7 +2,7 @@ import { isMobile } from "react-device-detect";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Typography, Box, Container, Card, CardContent } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Wallpaper from "../IMG/beigeWallpaper.jpg";
+import Wallpaper from "../IMG/greywallpaper2.png";
 
 const theme = createTheme({
   palette: {
@@ -24,6 +24,7 @@ const theme = createTheme({
 });
 
 const Civil = () => {
+  // eslint-disable-next-line
   const navigate = useNavigate();
 
   return (
