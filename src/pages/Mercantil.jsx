@@ -3,7 +3,7 @@ import { isMobile } from "react-device-detect";
 
 
 const Mercantil = () => {
-//Mercantil
+//Civil
     return(
 <Container>
           <div
