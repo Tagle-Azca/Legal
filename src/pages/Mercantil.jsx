@@ -58,55 +58,43 @@ const Mercantil = () => {
                 Derecho Mercantil
               </Typography>
               <Typography variant="body1" paragraph>
-                El derecho civil es una rama del derecho privado que regula las relaciones jurídicas entre particulares. Se encarga de establecer las normas que rigen la vida en sociedad, abarcando aspectos como las obligaciones, los contratos, la propiedad, la familia y la sucesión. Su objetivo principal es garantizar la protección de los derechos e intereses de las personas, proporcionando un marco legal para la resolución de conflictos y la defensa de los derechos individuales.
+              El derecho mercantil, también llamado derecho comercial, es una rama del derecho privado que tiene como objetivo regular el intercambio de bienes y servicios entre privados, es decir, los actos comerciales y sus implicaciones jurídicas, para garantizar que cumplan siempre con lo establecido en la ley.
               </Typography>
-              
-
               <Typography variant="h4" gutterBottom sx={{ marginTop: "2rem" }}>
                 Asesorías en Derecho Mercantil
               </Typography>
               <Typography variant="body1" paragraph>
-                Ofrecemos servicios de asesoría en derecho civil para ayudar a los individuos y empresas a navegar por diversas situaciones legales. Algunos de los temas en los que podemos asesorarte incluyen:
+                Ofrecemos servicios de asesoría en derecho Mercantil para ayudar a los individuos y empresas a navegar por diversas situaciones legales. Algunos de los temas en los que podemos asesorarte incluyen:
               </Typography>
-
               <Typography variant="h6" gutterBottom>
-                Contratos:
+                Controversias mercantiles:
               </Typography>
               <Typography variant="body1" paragraph>
-                - Redacción, revisión y negociación de contratos.<br />
-                - Asesoría en la resolución de conflictos derivados de incumplimientos contractuales.
+              -Litigio de toda clase de asuntos derivados de la práctica comercial.
               </Typography>
-
               <Typography variant="h6" gutterBottom>
-                Derechos de Propiedad:
+              Recuperación judicial y extrajudicial de títulos y contratos de crédito:
               </Typography>
               <Typography variant="body1" paragraph>
-                - Asesoría sobre la compra, venta y arrendamiento de bienes inmuebles.<br />
-                - Resolución de disputas relacionadas con la propiedad y la posesión.
+              -Créditos Hipotecarios y Prendarios; Pagarés, Cheques, Facturas. 
               </Typography>
-
               <Typography variant="h6" gutterBottom>
-                Familia:
+                Arrendamientos
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+                Constitucion de patrimonio familiar
+              </Typography>
+              <Typography variant="h6" gutterBottom>
+              Litigios derivados de conflictos entre accionistas:
               </Typography>
               <Typography variant="body1" paragraph>
-                - Asesoría en procesos de divorcio y separación.<br />
-                - Asistencia en la adopción, tutela y guarda de menores.
+              -Ejecución y rescisión de todo tipo de contratos y convenios mercantiles; juicios concursales.
               </Typography>
-
               <Typography variant="h6" gutterBottom>
-                Sucesiones:
+              Demandas en contra de cualquier aseguradora:
               </Typography>
               <Typography variant="body1" paragraph>
-                - Asesoría en la planificación patrimonial y elaboración de testamentos.<br />
-                - Orientación en procesos de sucesión y herencia.
-              </Typography>
-
-              <Typography variant="h6" gutterBottom>
-                Responsabilidad Mercantil:
-              </Typography>
-              <Typography variant="body1" paragraph>
-                - Asesoría sobre daños y perjuicios en accidentes y otros eventos que causen daños a terceros.<br />
-                - Representación legal en reclamaciones por responsabilidad civil.
+              -Por el cumplimiento forzoso del contrato (de autos, de vida, de riesgos, de gastos médicos etc)
               </Typography>
             </CardContent>
           </Card>
